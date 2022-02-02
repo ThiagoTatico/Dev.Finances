@@ -15,31 +15,40 @@
 
   <body>
     <header>
-      <h1 id="logo">Dev.Finance$</h1>
+      <img src="./images/logo.svg" alt="Dev Finances Logo">
     </header>
 
     <main class="container">
       <section id="balance">
-        <h2>Balance</h2>
+        <h2 class="sr-only">Balance</h2>
 
         <div class="card">
-          <h3>Incomes</h3>
+          <h3>
+            <span>Incomes</span>
+            <img src="./images/income.svg" alt="image of green arrow pointing up">
+          </h3>
           <p>R$ 5.000,00</p>
         </div>
 
         <div class="card">
-          <h3>Expenses</h3>
+          <h3>
+            <span>Expenses</span>
+            <img src="./images/expense.svg" alt="image of red arrow pointing down">
+          </h3>
           <p>R$ 2.000,00</p>
         </div>
 
         <div class="card total">
-          <h3>Total</h3>
+          <h3>
+            <span>Total</span>
+            <img src="./images/total.svg" alt="image of Cash symbol">
+          </h3>
           <p>R$ 3.000,00</p>
         </div>
       </section>
 
       <section id="transactions">
-        <h2>Transactions</h2>
+        <h2 class="sr-only">Transactions</h2>
 
         <table id="dataTable">
           <thead>
