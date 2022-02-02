@@ -46,17 +46,17 @@ h2 {
 
 /* Links & Buttons ================================================================= */
 a {
-  color: #49AA26;
+  color: #49aa26;
   text-decoration: none;
 }
 
 a:hover {
-  color: #3DD705;
+  color: #3dd705;
 }
 
 .button.new {
   display: inline-block;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
 /* Header ================================================================= */
@@ -114,7 +114,7 @@ header {
 #dataTable {
   width: 100%;
   border-spacing: 0 0.5rem;
-  color: #969CB3;
+  color: #969cb3;
 }
 
 table thead tr th:first-child,
@@ -154,17 +154,79 @@ td.description {
 }
 
 td.income {
-  color: #12A454;
+  color: #12a454;
 }
 
 td.expense {
-  color: #E92929
+  color: #e92929;
+}
+
+/* Modal ================================================================= */
+.modalOverlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modalOverlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background: #f0f1f5;
+  padding: 2.4rem;
+}
+
+/* Form ================================================================= */
+#form {
+  max-width: 500px;
+}
+
+#form h2 {
+  margin-top: 0;
+}
+
+input {
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.8rem;
+  width: 100%;
+}
+
+.inputGroup {
+  margin-top: 0.8rem;
+}
+
+.inputGroup small{
+  opacity: 0.7;
+  font-size: 13px;
+}
+
+.inputGroup.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputGroup.actions .button,
+.inputGroup.actions button {
+  width: 40%;
 }
 
 /* Footer ================================================================= */
 footer {
   text-align: center;
-  padding: 4rem 0 2rem;
+  padding: 6rem 0 2rem;
   color: var(--dark-blue);
   opacity: 0.7;
 }
@@ -180,7 +242,4 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
-
-
-
 }
