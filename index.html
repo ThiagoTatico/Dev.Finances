@@ -35,7 +35,7 @@
             <span>Expenses</span>
             <img src="./images/expense.svg" alt="image of red arrow pointing down">
           </h3>
-          <p>R$ 2.000,00</p>
+          <p>R$ 700,00</p>
         </div>
 
         <div class="card total">
@@ -43,14 +43,14 @@
             <span>Total</span>
             <img src="./images/total.svg" alt="image of Cash symbol">
           </h3>
-          <p>R$ 3.000,00</p>
+          <p>R$ 4.300,00</p>
         </div>
       </section>
 
       <section id="transactions">
         <h2 class="sr-only">Transactions</h2>
 
-        <a href="#" class="button new">+ New Transaction</a>
+        <a href="#" onclick="Modal.open()" class="button new">+ New Transaction</a>
 
         <table id="dataTable">
           <thead>
@@ -88,7 +88,7 @@
       </section>
     </main>
 
-    <div class="modalOverlay ">
+    <div class="modalOverlay">
       <div class="modal">
         <div id="form">
           <h2>New Transaction</h2>
@@ -111,7 +111,7 @@
             </div>
             
             <div class="inputGroup actions">
-              <a href="#" class="button cancel"> Cancel </a>
+              <a href="#" onclick="Modal.close()" class="button cancel"> Cancel </a>
               <button>Save</button>
             </div>
 
@@ -123,6 +123,6 @@
 
     <footer><p>Dev.Finance$</p></footer>
 
-    <script src="main.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
