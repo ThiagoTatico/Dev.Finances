@@ -1,6 +1,7 @@
 /* Global ================================================================= */
 :root {
   --dark-blue: #363f5f;
+  --dark-green: #49aa26;
 }
 
 * {
@@ -46,7 +47,7 @@ h2 {
 
 /* Links & Buttons ================================================================= */
 a {
-  color: #49aa26;
+  color: var(--dark-green);
   text-decoration: none;
 }
 
@@ -54,9 +55,40 @@ a:hover {
   color: #3dd705;
 }
 
+button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  color: white;
+  background: var(--dark-green);
+  padding: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3dd705;
+}
+
 .button.new {
   display: inline-block;
   margin-bottom: 0.8rem;
+}
+
+.button.cancel {
+  color: #e92929;
+  border: 2px #e92929 solid;
+  border-radius: 0.25rem;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button.cancel:hover {
+  background: #e92929;
+  color: white;
 }
 
 /* Header ================================================================= */
@@ -72,13 +104,13 @@ header {
 }
 
 #balance h2 {
-  color: #fff;
+  color: white;
   margin-top: 0;
 }
 
 /* Cards ================================================================= */
 .card {
-  background: #fff;
+  background: white;
   padding: 1.5rem 2rem;
   border-radius: 0.25rem;
   margin-bottom: 2rem;
@@ -100,8 +132,8 @@ header {
 }
 
 .card.total {
-  background: #49aa26;
-  color: #fff;
+  background: var(--dark-green);
+  color: white;
 }
 
 /* Table ================================================================= */
@@ -114,7 +146,7 @@ header {
 #dataTable {
   width: 100%;
   border-spacing: 0 0.5rem;
-  color: #969cb3;
+  font-size: 15px;
 }
 
 table thead tr th:first-child,
@@ -128,15 +160,15 @@ table tbody tr td:last-child {
 }
 
 table th {
-  background: #fff;
-  opacity: 0.9;
+  background: white;
+  color: var(--dark-blue);
   font-weight: normal;
   padding: 1rem 2rem;
   text-align: left;
 }
 
 table tbody tr {
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 table tbody tr:hover {
@@ -144,7 +176,7 @@ table tbody tr:hover {
 }
 
 table tbody td {
-  background: #fff;
+  background: white;
   padding: 1rem 2rem;
   font-weight: normal;
 }
@@ -220,13 +252,14 @@ input {
 
 .inputGroup.actions .button,
 .inputGroup.actions button {
-  width: 40%;
+  width: 48%;
 }
 
 /* Footer ================================================================= */
 footer {
   text-align: center;
-  padding: 6rem 0 2rem;
+  margin-top: 25rem;
+  padding: 1rem 0 2rem;
   color: var(--dark-blue);
   opacity: 0.7;
 }
