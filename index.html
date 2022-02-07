@@ -50,7 +50,7 @@
       <section id="transactions">
         <h2 class="sr-only">Transactions</h2>
 
-        <a href="#" onclick="Modal.open()" class="button new">+ New Transaction</a>
+        <a href="#" onclick="Modal.showModal()" class="button new">+ New Transaction</a>
 
         <table id="dataTable">
           <thead>
@@ -63,26 +63,7 @@
           </thead>
 
           <tbody>
-            <tr>
-              <td class="description">Luz</td>
-              <td class="expense">- R$ 500,00</td>
-              <td class="date">23/01/2021</td>
-              <td> <img src="./images/minus.svg" alt="Minus Signal"> </td>
-            </tr>
-
-            <tr>
-              <td class="description">Criação de Website</td>
-              <td class="income">R$ 5.000,00</td>
-              <td class="date">23/01/2021</td>
-              <td> <img src="./images/minus.svg" alt="Minus Signal"> </td>
-            </tr>
-
-            <tr>
-              <td class="description">Internet</td>
-              <td class="expense">- R$ 200,00</td>
-              <td class="date">23/01/2021</td>
-              <td> <img src="./images/minus.svg" alt="Minus Signal"> </td>
-            </tr>
+            
           </tbody>
         </table>
       </section>
@@ -111,7 +92,7 @@
             </div>
             
             <div class="inputGroup actions">
-              <a href="#" onclick="Modal.close()" class="button cancel"> Cancel </a>
+              <a href="#" onclick="Modal.showModal()" class="button cancel"> Cancel </a>
               <button>Save</button>
             </div>
 
