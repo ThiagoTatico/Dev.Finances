@@ -26,12 +26,34 @@ const transactions = [
   }
 ]
 
-const Transition = {
-  sumIncomes() {},
+const Transaction = {
+  sumIncomes() {
+    let income = 0
 
-  sumExpenses() {},
+    transactions.forEach(transaction => {
+      if (transaction.amount > 0) {
+        income += transaction.amount
+      }
+    })
 
-  totalExpenses() {}
+    return income
+  },
+
+  sumExpenses() {
+    let expense = 0
+
+    transactions.forEach(transaction => {
+      if (transaction.amount < 0) {
+        expense += transaction.amount
+      }
+    })
+
+    return expense
+  },
+
+  totalExpenses() {
+    return Transaction.sumIncomes() + Transaction.sumExpenses()
+  }
 }
 
 const DOM = {
@@ -58,7 +80,9 @@ const DOM = {
   },
 
   updateBalance() {
-    
+    document.getElementById('incomeDisplay').innerHTML = Utils.formatCurrency(Transaction.sumIncomes())
+    document.getElementById('expenseDisplay').innerHTML = Utils.formatCurrency(Transaction.sumExpenses()) 
+    document.getElementById('totalDisplay').innerHTML = Utils.formatCurrency(Transaction.totalExpenses()) 
   }
 }
 
@@ -79,6 +103,9 @@ const Utils = {
   }
 }
 
-transactions.forEach(function (transaction) {
+// Call functions
+transactions.forEach((transaction) => {
   DOM.addTransaction(transaction)
 })
+
+DOM.updateBalance()
