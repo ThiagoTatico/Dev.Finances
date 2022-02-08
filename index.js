@@ -5,8 +5,18 @@ const Modal = {
   }
 }
 
+const Storage = {
+  get() {
+    return JSON.parse(localStorage.getItem('dev.finances:transactions')) || []
+  },
+
+  set(transactions) {
+    localStorage.setItem('dev.finances:transactions', JSON.stringify(transactions))
+  }
+}
+
 const Transaction = {
-  all: [],
+  all: Storage.get(),
   
   add(transaction) {
     Transaction.all.push(transaction)
@@ -170,6 +180,8 @@ const App = {
   init() {
     Transaction.all.forEach(DOM.addTransaction)
     DOM.updateBalance()
+
+    Storage.set(Transaction.all)
   },
 
   reload() {
