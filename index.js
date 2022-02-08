@@ -19,7 +19,7 @@ const Transaction = {
   all: Storage.get(),
   
   add(transaction) {
-    Transaction.all.push(transaction)
+    Transaction.all.unshift(transaction)
     App.reload()
   },
 
